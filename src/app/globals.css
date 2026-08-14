@@ -1,26 +1,312 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Theming, after the app's `ColorPalettePreference` / `DarkModePreference` pair: the page has a
+ * palette, and the reader picks. Four choices, all off the same token set —
+ *
+ *   Light (default)  green on near-white. The mark's own teal (#16474E) at a lightness that reads.
+ *   Dark             the same green, brought up over a teal-black ground.
+ *   Auto             Light or Dark, whichever the device asks for.
+ *   Omega            the app's own dark scheme: Primary #16053D under Secondary #FF3C8F.
+ *
+ * Every component reads tokens only — `bg-bg`, `text-fg`, `text-muted`, `border-line`, `text-accent`
+ * — so a new palette is a block of custom properties and nothing else. `@theme inline` is what makes
+ * the utilities resolve the variable at use time rather than baking the default palette in.
+ */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-deep: var(--bg-deep);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --color-live: var(--live);
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+
+  /* The app lays out on an 8dp rhythm with a 16dp gutter; sections keep to it. */
+  --spacing-gutter: 1.25rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Green, light — the default. `--logo-on-*` are set by the document head, which knows the base path. */
+:root {
+  color-scheme: light;
+
+  --bg: #f4f8f7;
+  --bg-deep: #e7efed;
+  --surface: #ffffff;
+  --surface-raised: #edf4f2;
+  --fg: #0a1a1c;
+  --muted: #47595b;
+  --subtle: #6b7d7e;
+  --line: rgb(10 26 28 / 0.12);
+  --line-strong: rgb(10 26 28 / 0.28);
+  --accent: #0b6b53;
+  --accent-fg: #ffffff;
+  --accent-soft: rgb(11 107 83 / 0.12);
+  --live: #0b6b53;
+
+  --pulse: #0b6b53;
+  --glow: rgb(11 107 83 / 0.12);
+  --logo: var(--logo-on-light);
+}
+
+/* Auto: the same two palettes, picked by the device. */
+[data-theme="system"] {
+  color-scheme: light;
+
+  --bg: #f4f8f7;
+  --bg-deep: #e7efed;
+  --surface: #ffffff;
+  --surface-raised: #edf4f2;
+  --fg: #0a1a1c;
+  --muted: #47595b;
+  --subtle: #6b7d7e;
+  --line: rgb(10 26 28 / 0.12);
+  --line-strong: rgb(10 26 28 / 0.28);
+  --accent: #0b6b53;
+  --accent-fg: #ffffff;
+  --accent-soft: rgb(11 107 83 / 0.12);
+  --live: #0b6b53;
+
+  --pulse: #0b6b53;
+  --glow: rgb(11 107 83 / 0.12);
+  --logo: var(--logo-on-light);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  [data-theme="system"] {
+    color-scheme: dark;
+
+    --bg: #0b1416;
+    --bg-deep: #060e10;
+    --surface: #14262a;
+    --surface-raised: #1c3338;
+    --fg: #f2f7f6;
+    --muted: #a9bfbf;
+    --subtle: #7d9695;
+    --line: rgb(255 255 255 / 0.1);
+    --line-strong: rgb(255 255 255 / 0.24);
+    --accent: #34d6a3;
+    --accent-fg: #04211b;
+    --accent-soft: rgb(52 214 163 / 0.14);
+    --live: #34d6a3;
+
+    --pulse: #34d6a3;
+    --glow: rgb(52 214 163 / 0.2);
+    --logo: var(--logo-on-dark);
   }
 }
 
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f4f8f7;
+  --bg-deep: #e7efed;
+  --surface: #ffffff;
+  --surface-raised: #edf4f2;
+  --fg: #0a1a1c;
+  --muted: #47595b;
+  --subtle: #6b7d7e;
+  --line: rgb(10 26 28 / 0.12);
+  --line-strong: rgb(10 26 28 / 0.28);
+  --accent: #0b6b53;
+  --accent-fg: #ffffff;
+  --accent-soft: rgb(11 107 83 / 0.12);
+  --live: #0b6b53;
+
+  --pulse: #0b6b53;
+  --glow: rgb(11 107 83 / 0.12);
+  --logo: var(--logo-on-light);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0b1416;
+  --bg-deep: #060e10;
+  --surface: #14262a;
+  --surface-raised: #1c3338;
+  --fg: #f2f7f6;
+  --muted: #a9bfbf;
+  --subtle: #7d9695;
+  --line: rgb(255 255 255 / 0.1);
+  --line-strong: rgb(255 255 255 / 0.24);
+  --accent: #34d6a3;
+  --accent-fg: #04211b;
+  --accent-soft: rgb(52 214 163 / 0.14);
+  --live: #34d6a3;
+
+  --pulse: #34d6a3;
+  --glow: rgb(52 214 163 / 0.2);
+  --logo: var(--logo-on-dark);
+}
+
+/* The app's own palette, kept as the fourth choice. */
+[data-theme="omega"] {
+  color-scheme: dark;
+
+  --bg: #16053d;
+  --bg-deep: #0c0125;
+  --surface: #2b1b4e;
+  --surface-raised: #35265a;
+  --fg: #ffffff;
+  --muted: #c3b4d8;
+  --subtle: #9385ae;
+  --line: rgb(255 255 255 / 0.1);
+  --line-strong: rgb(255 255 255 / 0.25);
+  --accent: #ff3c8f;
+  --accent-fg: #16053d;
+  --accent-soft: rgb(255 60 143 / 0.15);
+  --live: #4cd964;
+
+  /* Blue300, as `AnimatedOmegaLogo` uses for the waves in the app. */
+  --pulse: #5ac8fa;
+  --glow: rgb(255 60 143 / 0.22);
+  --logo: var(--logo-on-dark);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* The sticky header must not cover the section a hash link lands on. */
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: color-mix(in oklab, var(--accent) 35%, transparent);
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* The display voice: Black weight, uppercase, tight leading — `editorialDisplayStyle`. */
+@utility display {
+  font-weight: 900;
+  line-height: 0.94;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+/* Small, wide-tracked uppercase for eyebrows, captions and section notes — `editorialLabelStyle`. */
+@utility label {
+  font-size: 0.6875rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Tabular figures, as the app asks for with `fontFeatureSettings = "tnum"`. */
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Section gutter: the app's 16dp padding, widening into a centred column on desktop. */
+@utility shell {
+  width: 100%;
+  max-width: 78rem;
+  margin-inline: auto;
+  padding-inline: var(--spacing-gutter);
+}
+
+/* Horizontal rails hide their scrollbar; the bleeding last card is the affordance. */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* The accent bloom over the hero, scrimmed into the page colour like the app's hero gradient. */
+@utility bloom-hero {
+  background-image:
+    radial-gradient(120% 80% at 80% 0%, var(--glow), transparent 60%),
+    linear-gradient(to bottom, color-mix(in oklab, var(--bg-deep) 55%, transparent), var(--bg));
+}
+
+/* The download band: the same bloom, from the other corner. */
+@utility bloom-cta {
+  background-image: radial-gradient(90% 120% at 15% 0%, var(--glow), transparent 65%);
+}
+
+/* The mark, as a background so only the variant a theme actually uses is downloaded. */
+@utility logo-mark {
+  background-image: var(--logo);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* The logo's idle breathing, and the sound waves rolling out of the speaker cone. */
+@keyframes omega-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+@keyframes omega-ring {
+  0% {
+    transform: scale(0.25);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-breathe {
+  animation: omega-breathe 3.2s ease-in-out infinite;
+}
+
+.animate-ring {
+  animation: omega-ring 3.2s ease-out infinite;
+}
+
+.animate-rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-breathe,
+  .animate-ring,
+  .animate-rise {
+    animation: none;
+  }
 }

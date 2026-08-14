@@ -1,0 +1,318 @@
+{
+  "syncedAt": "2026-08-14T16:53:36.741Z",
+  "about": {
+    "title": "About Us",
+    "hero": {
+      "eyebrow": "Kisumu · Since 1983",
+      "title": "The first and",
+      "titleAccent": "the last of its kind",
+      "subtitle": "Charles Ogweno flew jets for the Kenya Air Force before he ever touched a turntable. He named the sound Omega One because it was meant to be the only one that lasted. Four decades on, it is the one still standing.",
+      "image": null
+    },
+    "story": {
+      "title": "Our story",
+      "note": "Four decades",
+      "lede": "Omega One has been a household name in western Kenya since 1983 — a mobile disco that grew into a sound company, a concert stage and a recording studio. The rivals it started against, Intercity, Funkatek and Galaxy, are all gone.",
+      "milestones": [
+        {
+          "year": "1982",
+          "title": "Out of the cockpit",
+          "text": "Ogweno joins the Kenya Air Force as a flight cadet and trains as a pilot in the UK. After the attempted coup he is detained, and on release he leaves the force for good."
+        },
+        {
+          "year": "1983",
+          "title": "Omega One begins",
+          "text": "He names the mobile disco Omega One — the first and the last of its kind. Intercity, Funkatek and Galaxy all came after, and none of them lasted."
+        },
+        {
+          "year": "1990s",
+          "title": "The residencies",
+          "text": "Years on rotation at Tokyo Omega Lodge in Otonglo and Webbs Club in Kisii, with shows out to Mombasa, Kitale, Kapsabet and Nakuru."
+        },
+        {
+          "year": "2000s",
+          "title": "Sound Check Studio",
+          "text": "The ground floor of the family house in Kisumu becomes a recording studio. Ohangla maestro Tony Nyadundo and Onyi Papa Jay both cut tracks there."
+        },
+        {
+          "year": "Today",
+          "title": "Still on the road",
+          "text": "Full live sound reinforcement for concerts, rallies and the international bands that tour the western region — with the DJs Omega trained now working across Kenya."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": "43",
+        "label": "Years on the road"
+      },
+      {
+        "value": "10",
+        "label": "Permanent crew"
+      },
+      {
+        "value": "130",
+        "label": "kVA on site"
+      }
+    ],
+    "room": {
+      "title": "The room",
+      "note": "Swipe",
+      "shots": [
+        {
+          "index": "01",
+          "caption": "Boss, Charles Ogweno",
+          "description": "",
+          "image": {
+            "src": "/media/about-shot-1786613930209-a6408fa9-800.webp",
+            "width": 800,
+            "height": 1067,
+            "large": "/media/about-shot-1786613930209-a6408fa9-1600.webp"
+          }
+        },
+        {
+          "index": "02",
+          "caption": "Our Sound Engineer, Paul",
+          "description": "",
+          "image": {
+            "src": "/media/about-shot-1786614943604-4d242d62-800.webp",
+            "width": 800,
+            "height": 793,
+            "large": "/media/about-shot-1786614943604-4d242d62-1600.webp"
+          }
+        },
+        {
+          "index": "03",
+          "caption": "Our Software Engineer, C4",
+          "description": "",
+          "image": {
+            "src": "/media/about-shot-1786615020654-fcfd3b56-800.webp",
+            "width": 800,
+            "height": 800,
+            "large": "/media/about-shot-1786615020654-fcfd3b56-1600.webp"
+          }
+        },
+        {
+          "index": "04",
+          "caption": "Line array and stage",
+          "description": "",
+          "image": {
+            "src": "/media/about-shot-1786615185947-2f882766-800.webp",
+            "width": 800,
+            "height": 798,
+            "large": "/media/about-shot-1786615185947-2f882766-1600.webp"
+          }
+        },
+        {
+          "index": "05",
+          "caption": "On the road, western Kenya",
+          "description": "",
+          "image": {
+            "src": "/media/about-shot-1786545859135-eb2619fd-800.webp",
+            "width": 800,
+            "height": 771,
+            "large": "/media/about-shot-1786545859135-eb2619fd-1600.webp"
+          }
+        },
+        {
+          "index": "06",
+          "caption": "Screens and Lights Set Up",
+          "description": "",
+          "image": {
+            "src": "/media/about-shot-1786615120474-41997e96-800.webp",
+            "width": 800,
+            "height": 796,
+            "large": "/media/about-shot-1786615120474-41997e96-1600.webp"
+          }
+        }
+      ]
+    },
+    "legends": {
+      "title": "Legends",
+      "note": "Swipe",
+      "shots": [
+        {
+          "index": "01",
+          "caption": "OGWENO",
+          "description": "",
+          "image": {
+            "src": "/media/about-legend-1786545705165-108f3ad5-800.webp",
+            "width": 720,
+            "height": 480,
+            "large": "/media/about-legend-1786545705165-108f3ad5-1600.webp"
+          }
+        },
+        {
+          "index": "02",
+          "caption": "DJ MIKE",
+          "description": "",
+          "image": {
+            "src": "/media/about-legend-1786547136336-0391272c-800.webp",
+            "width": 480,
+            "height": 530,
+            "large": "/media/about-legend-1786547136336-0391272c-1600.webp"
+          }
+        },
+        {
+          "index": "03",
+          "caption": "NINJAMAN",
+          "description": "",
+          "image": {
+            "src": "/media/about-legend-1786547208829-d5a2106e-800.webp",
+            "width": 432,
+            "height": 478,
+            "large": "/media/about-legend-1786547208829-d5a2106e-1600.webp"
+          }
+        },
+        {
+          "index": "04",
+          "caption": "DJ MILTON",
+          "description": "",
+          "image": {
+            "src": "/media/about-legend-1786547289744-3ea7fb68-800.webp",
+            "width": 351,
+            "height": 329,
+            "large": "/media/about-legend-1786547289744-3ea7fb68-1600.webp"
+          }
+        },
+        {
+          "index": "05",
+          "caption": "DJ ARIFFIX",
+          "description": "",
+          "image": {
+            "src": "/media/about-legend-1786550386270-6dac0e0d-800.webp",
+            "width": 800,
+            "height": 1064,
+            "large": "/media/about-legend-1786550386270-6dac0e0d-1600.webp"
+          }
+        },
+        {
+          "index": "06",
+          "caption": "DJ FIASCO",
+          "description": "",
+          "image": {
+            "src": "/media/about-legend-1786550420978-9415c11c-800.webp",
+            "width": 530,
+            "height": 398,
+            "large": "/media/about-legend-1786550420978-9415c11c-1600.webp"
+          }
+        }
+      ]
+    },
+    "services": {
+      "title": "What we do",
+      "note": "Six ways in",
+      "items": [
+        {
+          "icon": "tune",
+          "title": "Live sound",
+          "text": "Line array reinforcement — Martin Audio, Turbosound and Electro-Voice — rigged for halls and open grounds."
+        },
+        {
+          "icon": "bolt",
+          "title": "Stage and power",
+          "text": "Concert stage build and 130 kVA of generator on site, so the show does not stop with the grid."
+        },
+        {
+          "icon": "album",
+          "title": "Mobile disco",
+          "text": "The original business. Benga, ohangla and rumba, read off the floor by DJs who know the room."
+        },
+        {
+          "icon": "campaign",
+          "title": "Tours",
+          "text": "Systems hired to international bands playing the country."
+        },
+        {
+          "icon": "groups",
+          "title": "DJ development",
+          "text": "Don Ben, DJ Mike, Kim and Charley all learned the ropes here before moving on."
+        },
+        {
+          "icon": "mic",
+          "title": "Sound Check Studio (Closed)",
+          "text": "Tracking and mixing in Kisumu, in the room where Nyadundo and Onyi Papa Jay recorded."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact us",
+      "note": "We reply",
+      "rows": [
+        {
+          "icon": "chat",
+          "label": "WhatsApp",
+          "value": "+254 714 695929",
+          "uri": "https://wa.me/254714695929"
+        },
+        {
+          "icon": "call",
+          "label": "Phone",
+          "value": "+254 714 695929",
+          "uri": "tel:+254714695929"
+        },
+        {
+          "icon": "mail",
+          "label": "Email",
+          "value": "omegaonekisumu@gmail.com",
+          "uri": "mailto:omegaonekisumu@gmail.com"
+        },
+        {
+          "icon": "place",
+          "label": "Based in",
+          "value": "Kisumu, western Kenya",
+          "uri": "geo:0,0?q=Kisumu%2C+Kenya"
+        }
+      ],
+      "cta": "Book the sound",
+      "ctaUri": "https://wa.me/254714695929",
+      "status": "Bookings open",
+      "hours": "Kisumu · touring western Kenya"
+    },
+    "links": [
+      {
+        "label": "Instagram",
+        "uri": "https://www.instagram.com/omegaoneevents/"
+      },
+      {
+        "label": "Facebook",
+        "uri": "https://www.facebook.com/Omegaonekisumu/"
+      },
+      {
+        "label": "The group",
+        "uri": "https://www.facebook.com/groups/2522239701254958/"
+      }
+    ],
+    "colophon": "Omega One Sounds · Kisumu, Kenya · Since 1983"
+  },
+  "mixes": [
+    {
+      "id": "14622661",
+      "title": "OMEGA ONE OLDSKOOL RAGGA",
+      "description": "deejay mendoz",
+      "durationSeconds": 4850,
+      "releasedAt": 1786425757000,
+      "previewUrl": "https://preview.hearthis.at/files/d764d0cce88a0d97e99358856e7c70cc.mp3",
+      "plays": 518,
+      "artwork": {
+        "src": "/media/w500_h500_q70_ptrue_v2_----cropped_1637751436926-0be60abd-256.webp",
+        "width": 256,
+        "height": 256
+      }
+    },
+    {
+      "id": "14556439",
+      "title": "Omega one mix bondo madaraka day special 2026",
+      "description": "omega one sounds since 1983 mixes",
+      "durationSeconds": 8394,
+      "releasedAt": 1783057420000,
+      "previewUrl": "https://preview.hearthis.at/files/a3ba34a2f1323896b0c168ae413095a8.mp3",
+      "plays": 5081,
+      "artwork": {
+        "src": "/media/w500_h500_q70_ptrue_v2_----cropped_1637751436926-0be60abd-256.webp",
+        "width": 256,
+        "height": 256
+      }
+    }
+  ]
+}
