@@ -115,8 +115,11 @@ Two settings matter if the address changes:
 - `NEXT_PUBLIC_SITE_URL` — the canonical origin, used by the canonical tag, Open Graph,
   `robots.txt` and `sitemap.xml`. Defaults to the Pages address in `src/lib/config.ts`.
 
-For a custom domain (`omegaonesounds.com`), add the domain in the repo's Pages settings, commit a
-`public/CNAME` holding it, and leave `NEXT_PUBLIC_BASE_PATH` empty.
+For a custom domain, set it in the repo's Settings → Pages → *Custom domain* and redeploy: the workflow
+then gets an empty base path and the domain's origin from `configure-pages`, so nothing in the code has to change. No
+`public/CNAME` is needed — GitHub ignores it for a site deployed by a workflow. The DNS records (on Namecheap) and
+the order to do it in are in omega-one-sounds' README, *A custom domain for the landing page*. Once the domain is
+live, change the fallback address in `src/lib/config.ts` and the addresses in this README.
 
 ## Keeping it in step with the app
 

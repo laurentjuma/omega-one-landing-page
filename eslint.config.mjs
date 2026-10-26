@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // The web player: omega-one-sounds' build, minified, published here as it is
+    "public/listen/**",
   ]),
 ]);
 

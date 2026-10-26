@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { PlayStoreButton } from "@/components/play-store-button";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { siteConfig } from "@/lib/config";
+import { playerHref } from "@/lib/player";
 
 /**
  * The top bar, transparent over the hero and fading to opaque as you scroll — the web reading of
@@ -71,8 +72,18 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-3">
-          {/* Hidden on the narrowest screens, where the footer's copy carries it instead. */}
-          <ThemeSwitcher className="hidden sm:inline-flex" />
+          {/* Hidden on the narrowest screens, where the footer's copy carries it instead. On a wrapper: the switcher's
+              own inline-flex beat a `hidden` passed to it, and on a phone it pushed Listen and Get the app off-screen. */}
+          <div className="hidden sm:block">
+            <ThemeSwitcher />
+          </div>
+          {/* The whole library in the browser, for anyone without Android; a link out, as the player is a page of its own */}
+          <a
+            href={playerHref()}
+            className="label rounded-full border border-line-strong px-4 py-2.5 transition-colors hover:border-accent hover:text-accent"
+          >
+            Listen
+          </a>
           <PlayStoreButton size="sm" label="Get the app" kicker="" />
         </div>
       </div>

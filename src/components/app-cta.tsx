@@ -2,6 +2,7 @@ import { ContentIcon } from "@/components/icons";
 import { OmegaMark } from "@/components/omega-mark";
 import { PlayStoreButton } from "@/components/play-store-button";
 import { appPerks } from "@/lib/config";
+import { playerHref } from "@/lib/player";
 
 /**
  * The download band that sits directly under the two mixes: the previews above are the argument, and
@@ -39,6 +40,14 @@ export function AppCta() {
           <PlayStoreButton size="lg" />
           <p className="label text-subtle">Free · Android</p>
         </div>
+
+        <p className="mt-5 text-sm text-muted">
+          No Android?{" "}
+          <a href={playerHref()} className="font-bold text-accent underline-offset-4 hover:underline">
+            Listen in your browser
+          </a>{" "}
+          — every mix, full length, on a computer or an iPhone.
+        </p>
 
         <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {appPerks.map((perk) => (

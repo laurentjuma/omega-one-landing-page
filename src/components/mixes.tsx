@@ -1,9 +1,10 @@
-import { ArrowUpRightIcon, HeadphonesIcon } from "@/components/icons";
+import { ArrowUpRightIcon, HeadphonesIcon, PlayIcon } from "@/components/icons";
 import { MixPlayer } from "@/components/mix-player";
 import { PlayStoreButton } from "@/components/play-store-button";
 import { PageImage } from "@/components/page-image";
 import { Card, Section, SectionHeader } from "@/components/section";
 import { siteConfig } from "@/lib/config";
+import { playerHref } from "@/lib/player";
 import type { Mix } from "@/lib/content";
 import { formatCount, formatDate, formatDuration } from "@/lib/format";
 
@@ -14,8 +15,8 @@ export function Mixes({ mixes }: { mixes: Mix[] }) {
       <SectionHeader title="Latest mixes" note="Two newest" />
 
       <p className="mt-6 max-w-2xl text-muted">
-        Fresh off the decks in Kisumu. Press play for a preview — the full sets, hours of them, are in
-        the app.
+        Fresh off the decks in Kisumu. Press play for a preview, or hear the whole set in your browser —
+        and every mix, downloads included, is in the app.
       </p>
 
       {mixes.length > 0 ? (
@@ -82,14 +83,22 @@ function MixCard({ mix, index }: { mix: Mix; index: number }) {
 
       {mix.previewUrl ? <MixPlayer src={mix.previewUrl} title={mix.title} /> : null}
 
-      <div className="mt-7 border-t border-line pt-6">
+      <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-4 border-t border-line pt-6">
+        {/* The full set in the web player, cued and one tap from playing; the app is the other way to it */}
+        <a
+          href={playerHref(mix.id)}
+          className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-black uppercase tracking-[0.08em] text-accent-fg transition-colors hover:bg-fg hover:text-bg"
+        >
+          <PlayIcon className="size-4" />
+          Play the full mix
+        </a>
         <a
           href={siteConfig.playStore.url}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.08em] text-accent underline-offset-4 hover:underline"
         >
-          Full mix in the app
+          Or in the app
           <ArrowUpRightIcon className="size-3.5" />
         </a>
       </div>
