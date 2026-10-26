@@ -12,11 +12,11 @@ export const siteConfig = {
   shortName: "Omega One",
   since: 1983,
   /**
-   * Where the site is served from. Set `NEXT_PUBLIC_SITE_URL` at build time; the default is the
-   * GitHub Pages address. It drives the canonical tag, the Open Graph URLs, `robots.txt` and
-   * `sitemap.xml`, so point it at the custom domain the day one is set up.
+   * Where the site is served from. CI sets `NEXT_PUBLIC_SITE_URL` from GitHub Pages; the default is
+   * the custom domain, omegaonesounds.com. It drives the canonical tag, the Open Graph URLs,
+   * `robots.txt` and `sitemap.xml`.
    */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://laurentjuma.github.io/omega-one-landing-page",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://omegaonesounds.com",
   description:
     "Omega One Sounds — Kisumu, Kenya, since 1983. Live sound, mobile disco and four decades of mixes. Hear the latest, then get the app.",
 

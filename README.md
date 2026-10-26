@@ -6,7 +6,7 @@ It is the app's **About Us** screen, rebuilt for the web: the same copy, the sam
 same editorial voice, with the two newest mixes and the download in the middle of it. Everything on
 the page leads to one action — installing the app.
 
-Live at **https://laurentjuma.github.io/omega-one-landing-page/**
+Live at **https://omegaonesounds.com/** (the old `laurentjuma.github.io/omega-one-landing-page/` redirects there)
 
 ## Stack
 
@@ -61,7 +61,7 @@ the full sets are in the app, which is the argument the download sections make.
 
 The app also runs in the browser (`:webApp` in [omega-one-sounds](https://github.com/laurentjuma/omega-one-sounds)), so a
 visitor without Android can hear a whole mix instead of the preview. Its build lives in `public/listen/` and ships with
-the page: **https://laurentjuma.github.io/omega-one-landing-page/listen/**.
+the page: **https://omegaonesounds.com/listen/**.
 
 - **Don't edit `public/listen/` by hand.** It's the app's production build, replaced whole by omega-one-sounds' *Publish
   web* workflow (`.github/workflows/web.yml` there), which commits it here; that push deploys the site as any other.
@@ -115,11 +115,12 @@ Two settings matter if the address changes:
 - `NEXT_PUBLIC_SITE_URL` — the canonical origin, used by the canonical tag, Open Graph,
   `robots.txt` and `sitemap.xml`. Defaults to the Pages address in `src/lib/config.ts`.
 
-For a custom domain, set it in the repo's Settings → Pages → *Custom domain* and redeploy: the workflow
+The site is on **omegaonesounds.com** (Namecheap; set up 2026-10-26). For a custom domain, set it in the repo's
+Settings → Pages → *Custom domain* and redeploy: the workflow
 then gets an empty base path and the domain's origin from `configure-pages`, so nothing in the code has to change. No
 `public/CNAME` is needed — GitHub ignores it for a site deployed by a workflow. The DNS records (on Namecheap) and
-the order to do it in are in omega-one-sounds' README, *A custom domain for the landing page*. Once the domain is
-live, change the fallback address in `src/lib/config.ts` and the addresses in this README.
+the order to do it in are in omega-one-sounds' README, *A custom domain for the landing page*. A change of domain
+also changes the fallback address in `src/lib/config.ts` and the addresses in this README.
 
 ## Keeping it in step with the app
 
