@@ -88,13 +88,8 @@ string|playlist_edit_shuffle|QWxlYXRvcmlv
 string|playlist_empty_addSongs|QcOxYWRpciBDYW5jaW9uZXM=
 string|playlist_empty|TGEgbGlzdGEgZGUgUmVwcm9kdWNjacOzbiBlc3TDoSBWYWPDrWE=
 string|playlist_title|TGlzdGEgZGUgUmVwcm9kdWNjacOzbg==
-string|search_albums|w4FsYnVtZXM=
-string|search_artists|QXJ0aXN0YXM=
 string|search_audios|Q2FuY2lvbmVz
-string|search_flacs|RmxhY3M=
 string|search_hint_query|Q29uc3VsdGEgbGEgYnVzcXVlZGE=
-string|search_hint|Q2FuY2lvbmVzLCDDoWxidW1lcywgYXJ0aXN0YXM=
-string|search_minerva|TWluZXJ2YQ==
 string|search_title|T21lZ2EgT25l
 string|settings_about_author_link|aHR0cHM6Ly9hbGFzaG92LmNvbQ==
 string|settings_about_author_text|QWxhc2hvdiBCZXJrZWxp
