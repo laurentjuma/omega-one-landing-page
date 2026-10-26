@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Omega One Sounds</title>
+    <meta name="theme-color" content="#121212">
+    <style>
+        html, body { height: 100%; margin: 0; }
+        html { background: #121212; }
+        #app { width: 100%; height: 100%; }
+        /* What shows while the app is fetched and started; the app takes it away with its first frame */
+        #loading {
+            position: fixed; inset: 0; display: flex; flex-direction: column; gap: 16px;
+            align-items: center; justify-content: center; color: #e6e1e5;
+            font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        }
+        #loading[hidden] { display: none; }
+        #loading .ring {
+            width: 36px; height: 36px; border-radius: 50%;
+            border: 3px solid #49454f; border-top-color: #d0bcff;
+            animation: spin 0.9s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        /* Said instead of a blank page where the browser can't run the app */
+        #unsupported { max-width: 28rem; padding: 0 24px; text-align: center; }
+        #unsupported h1 { font-size: 20px; margin: 0 0 8px; }
+        #unsupported p { margin: 0 0 16px; opacity: 0.8; }
+        #unsupported a { color: inherit; font-weight: 600; }
+        @media (prefers-color-scheme: light) {
+            html { background: #fef7ff; }
+            #loading { color: #1d1b20; }
+            #loading .ring { border-color: #cac4d0; border-top-color: #6750a4; }
+        }
+    </style>
+</head>
+<body>
+<div id="loading" role="status" aria-live="polite"><div class="ring"></div><div>Opening Omega One Sounds…</div></div>
+<div id="app"></div>
+<script>
+    // The app is Kotlin/Wasm, which needs WebAssembly's garbage collection: Chrome and Edge 119, Firefox 120,
+    // Safari 18.2. A browser without it would show a blank page, so it's asked first, with the smallest module that
+    // only such a browser accepts (a type section declaring one struct).
+    var wasmGc = new Uint8Array([0, 97, 115, 109, 1, 0, 0, 0, 1, 5, 1, 0x5f, 1, 0x7f, 0]);
+    var supported = typeof WebAssembly === "object" && typeof WebAssembly.validate === "function" &&
+        WebAssembly.validate(wasmGc);
+    if (supported) {
+        var app = document.createElement("script");
+        app.src = "omegaone.js";
+        document.body.appendChild(app);
+    } else {
+        document.getElementById("loading").innerHTML =
+            '<div id="unsupported"><h1>This browser can\'t run the player</h1>' +
+            '<p>Update it, or use a recent Chrome, Edge, Firefox or Safari (iOS 18.2 or later).</p>' +
+            '<p><a href="../#mixes">Hear the latest mixes on our site</a> · ' +
+            '<a href="https://play.google.com/store/apps/details?id=com.soundcheck.omegaone">Get the Android app</a></p></div>';
+    }
+</script>
+</body>
+</html>

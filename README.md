@@ -57,6 +57,23 @@ so publishing in the app is enough; nobody has to touch this repo.
 Only the mix previews still stream from where the app's audio is hosted. They are previews on purpose:
 the full sets are in the app, which is the argument the download sections make.
 
+## The web player
+
+The app also runs in the browser (`:webApp` in [omega-one-sounds](https://github.com/laurentjuma/omega-one-sounds)), so a
+visitor without Android can hear a whole mix instead of the preview. Its build lives in `public/listen/` and ships with
+the page: **https://laurentjuma.github.io/omega-one-landing-page/listen/**.
+
+- **Don't edit `public/listen/` by hand.** It's the app's production build, replaced whole by omega-one-sounds' *Publish
+  web* workflow (`.github/workflows/web.yml` there), which commits it here; that push deploys the site as any other.
+- `listen/?mix=<id>`, with the mix's `id` from `site-content.generated.json` (its hearthis track id), opens the player
+  with that mix cued. It needs one tap to play: a page opened from a link can't start sound by itself.
+- The player needs a recent browser (Chrome and Edge 119, Firefox 120, Safari 18.2). An older one gets a page linking
+  back to `../#mixes` and the Play Store, so the previews here stay the way in for everyone.
+- It is about 12 MB gzipped on a first visit, so link to it rather than embedding it in the page.
+- It shares this origin's storage. It doesn't read `omega-theme` yet.
+
+Not done yet: the mix cards' "Play the full mix" and a Listen link in the header.
+
 ## Theming
 
 The page carries the app's idea of a theme — a palette the reader picks — rather than a single look.

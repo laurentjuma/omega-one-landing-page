@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "subject": "Omega One Sounds (since 1983) — Kisumu, Kenya",
+    "compiledOn": "2026-08-12",
+    "sources": [
+      "https://www.standardmedia.co.ke/article/1144000930/from-the-skies-to-the-discotheque",
+      "https://www.nyongesasande.com/omega-one-sounds-and-events/",
+      "https://www.facebook.com/Omegaonekisumu/",
+      "https://www.instagram.com/omegaoneevents/",
+      "https://www.facebook.com/groups/2522239701254958/",
+      "https://play.google.com/store/apps/details?id=com.soundcheck.omegaone"
+    ],
+    "confirmBeforeShipping": [
+      "milestones[2].year and milestones[3].year are decade labels ('1990s', '2000s') because no source gives exact years for the club residencies or the studio opening — replace with real years.",
+      "stats.crew ('10') is from a 2008 newspaper profile and is likely out of date.",
+      "services.liveSound equipment list (Martin Audio W8LC, Turbosound, Electro-Voice, 130 kVA) comes from the company's own social listings, not a primary source.",
+      "contact.status / contact.hours are NOT sourced — there are no published opening hours anywhere. Reworded to a booking statement rather than an invented 'Open now'.",
+      "shots[].image are null: no licensed photography was available. Add URLs or drawable names.",
+      "hero.image is null for the same reason."
+    ]
+  },
+
+  "title": "About Us",
+
+  "hero": {
+    "eyebrow": "Kisumu · Since 1983",
+    "title": "The first and",
+    "titleAccent": "the last of its kind",
+    "subtitle": "Charles Ogweno flew jets for the Kenya Air Force before he ever touched a turntable. He named the sound Omega One because it was meant to be the only one that lasted. Four decades on, it is the one still standing.",
+    "image": null
+  },
+
+  "story": {
+    "title": "Our story",
+    "note": "Four decades",
+    "lede": "Omega One has been a household name in western Kenya since 1983 — a mobile disco that grew into a sound company, a concert stage and a recording studio. The rivals it started against, Intercity, Funkatek and Galaxy, are all gone.",
+    "milestones": [
+      {
+        "year": "1982",
+        "title": "Out of the cockpit",
+        "text": "Ogweno joins the Kenya Air Force as a flight cadet and trains as a pilot in the UK. After the attempted coup he is detained, and on release he leaves the force for good."
+      },
+      {
+        "year": "1983",
+        "title": "Omega One begins",
+        "text": "He names the mobile disco Omega One — the first and the last of its kind. Intercity, Funkatek and Galaxy all came after, and none of them lasted."
+      },
+      {
+        "year": "1990s",
+        "title": "The residencies",
+        "text": "Years on rotation at Tokyo Omega Lodge in Otonglo and Webbs Club in Kisii, with shows out to Mombasa, Kitale, Kapsabet and Nakuru."
+      },
+      {
+        "year": "2000s",
+        "title": "Sound Check Studio",
+        "text": "The ground floor of the family house in Kisumu becomes a recording studio. Ohangla maestro Tony Nyadundo and Onyi Papa Jay both cut tracks there."
+      },
+      {
+        "year": "Today",
+        "title": "Still on the road",
+        "text": "Full live sound reinforcement for concerts, rallies and the international bands that tour the western region — with the DJs Omega trained now working across Kenya."
+      }
+    ]
+  },
+
+  "stats": [
+    { "value": "43", "label": "Years on the road" },
+    { "value": "10", "label": "Permanent crew" },
+    { "value": "130", "label": "kVA on site" }
+  ],
+
+  "room": {
+    "title": "The room",
+    "note": "Swipe",
+    "shots": [
+      { "index": "01", "caption": "Sound Check Studio, Kisumu", "image": null },
+      { "index": "02", "caption": "Line array and stage", "image": null },
+      { "index": "03", "caption": "On the road, western Kenya", "image": null }
+    ]
+  },
+
+  "services": {
+    "title": "What we do",
+    "note": "Six ways in",
+    "items": [
+      {
+        "icon": "tune",
+        "title": "Live sound",
+        "text": "Line array reinforcement — Martin Audio, Turbosound and Electro-Voice — rigged for halls and open grounds."
+      },
+      {
+        "icon": "bolt",
+        "title": "Stage and power",
+        "text": "Concert stage build and 130 kVA of generator on site, so the show does not stop with the grid."
+      },
+      {
+        "icon": "mic",
+        "title": "Sound Check Studio",
+        "text": "Tracking and mixing in Kisumu, in the room where Nyadundo and Onyi Papa Jay recorded."
+      },
+      {
+        "icon": "album",
+        "title": "Mobile disco",
+        "text": "The original business. Benga, ohangla and rumba, read off the floor by DJs who know the room."
+      },
+      {
+        "icon": "campaign",
+        "title": "Rallies and tours",
+        "text": "Systems hired to political parties and to international bands playing the western region."
+      },
+      {
+        "icon": "groups",
+        "title": "DJ development",
+        "text": "Don Ben, DJ Mike, Kim and Charley all learned the ropes here before moving on."
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Contact us",
+    "note": "We reply",
+    "rows": [
+      {
+        "icon": "chat",
+        "label": "WhatsApp",
+        "value": "+254 714 695929",
+        "uri": "https://wa.me/254714695929"
+      },
+      {
+        "icon": "call",
+        "label": "Phone",
+        "value": "+254 714 695929",
+        "uri": "tel:+254714695929"
+      },
+      {
+        "icon": "mail",
+        "label": "Email",
+        "value": "omegaonekisumu@gmail.com",
+        "uri": "mailto:omegaonekisumu@gmail.com"
+      },
+      {
+        "icon": "place",
+        "label": "Based in",
+        "value": "Kisumu, western Kenya",
+        "uri": "geo:0,0?q=Kisumu%2C+Kenya"
+      }
+    ],
+    "cta": "Book the sound",
+    "ctaUri": "https://wa.me/254714695929",
+    "status": "Bookings open",
+    "hours": "Kisumu · touring western Kenya"
+  },
+
+  "links": [
+    { "label": "Instagram", "uri": "https://www.instagram.com/omegaoneevents/" },
+    { "label": "Facebook", "uri": "https://www.facebook.com/Omegaonekisumu/" },
+    { "label": "The group", "uri": "https://www.facebook.com/groups/2522239701254958/" }
+  ],
+
+  "colophon": "Omega One Sounds · Kisumu, Kenya · Since 1983"
+}
