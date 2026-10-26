@@ -252,4 +252,9 @@ string|shop_hint_query|U2VhcmNoIG1lcmNoYW5kaXNl
 string|shop_hint|U2VhcmNoIG1lcmNoYW5kaXNl
 string|shop_title|U2hvcA==
 string|subscriptions_required|U3Vic2NyaXB0aW9uIHJlcXVpcmVkIGZvciB0aGlzIGZlYXR1cmU=
+string|web_getApp_button|R2V0IGFwcA==
+string|web_getApp_dismiss|Tm90IG5vdw==
+string|web_getApp_install|SW5zdGFsbA==
+string|web_getApp_text|RXZlcnkgbWl4LCBwbGF5aW5nIGluIHRoZSBiYWNrZ3JvdW5kIHdpdGggdGhlIHNjcmVlbiBvZmYsIGFuZCBkb3dubG9hZHMgdG8gbGlzdGVuIG9mZmxpbmUuIEZyZWUgb24gQW5kcm9pZC4=
+string|web_getApp_title|R2V0IHRoZSBPbWVnYSBPbmUgYXBw
 string|welcome_title|V2VsY29tZSwgJTEkcw==
