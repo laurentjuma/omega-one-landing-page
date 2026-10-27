@@ -12,6 +12,7 @@ string|audio_menu_downloadById|SGVydW50ZXJsYWRlbg==
 string|audio_menu_download|SGVydW50ZXJsYWRlbg==
 string|audio_menu_playNext|bsOkY2hzdGVzIEFic3BpZWxlbg==
 string|audio_menu_play|QWJzcGllbGVu
+string|audio_menu_share|VGVpbGVu
 string|captcha_empty|Q2FwdGNoYSBkYXJmIG5pY2h0IGxlZXIgc2Vpbg==
 string|captcha_hint|VGlwcGVuIFNpZSBkaWUgQnVjaHN0YWJlbiBvYmVu
 string|captcha_reload|TmV1IGxhZGVu

@@ -16,6 +16,7 @@ string|audio_menu_download|RG93bmxvYWQ=
 string|audio_menu_playNext_message|QWRkZWQgdG8gcXVldWU=
 string|audio_menu_playNext|UGxheSBuZXh0
 string|audio_menu_play|UGxheQ==
+string|audio_menu_share|U2hhcmU=
 string|back_to_login|QmFjayB0byBMb2dpbg==
 string|captcha_empty|Q2FwdGNoYSBjYW5ub3QgYmUgZW1wdHk=
 string|captcha_hint|VHlwZSBsZXR0ZXJzIGFib3Zl
@@ -259,4 +260,8 @@ string|web_getApp_install|SW5zdGFsbA==
 string|web_getApp_short|UGxheXMgaW4gdGhlIGJhY2tncm91bmQsIGRvd25sb2FkcyBmb3Igb2ZmbGluZQ==
 string|web_getApp_text|RXZlcnkgbWl4LCBwbGF5aW5nIGluIHRoZSBiYWNrZ3JvdW5kIHdpdGggdGhlIHNjcmVlbiBvZmYsIGFuZCBkb3dubG9hZHMgdG8gbGlzdGVuIG9mZmxpbmUuIEZyZWUgb24gQW5kcm9pZC4=
 string|web_getApp_title|R2V0IHRoZSBPbWVnYSBPbmUgYXBw
+string|web_openApp_button|T3BlbiBhcHA=
+string|web_openApp_open|T3Blbg==
+string|web_openApp_short|Q2Fycnkgb24gaW4gdGhlIGFwcCwgd2l0aCB0aGUgc2NyZWVuIG9mZg==
+string|web_openApp_title|T3BlbiBpbiB0aGUgT21lZ2EgT25lIGFwcA==
 string|welcome_title|V2VsY29tZSwgJTEkcw==
