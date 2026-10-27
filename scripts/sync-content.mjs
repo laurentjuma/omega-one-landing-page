@@ -8,7 +8,9 @@
  *   2. reads the newest mixes from the app's mixes feed,
  *   3. downloads every image, resizes it to the sizes the page actually uses, and writes WebP into
  *      `public/media/`,
- *   4. writes `src/content/site-content.generated.json`, which is what the page imports.
+ *   4. lists every mix, for the page a shared mix's link opens (`/listen/mix/<id>/`): its title and cover
+ *      in the link's preview,
+ *   5. writes `src/content/site-content.generated.json`, which is what the page imports.
  *
  * The generated file and the media are committed, so `npm run build` works on a fresh clone with no
  * network. Run `npm run sync` (CI does, on a schedule) to pick up new copy, photography or mixes.
@@ -26,6 +28,10 @@ const CONTENT_URL =
   "https://raw.githubusercontent.com/c4Entertainment/omega-one-newsfeed/main/content/app_content.json";
 const MIXES_URL = "https://api-v2.hearthis.at/omega-one-sounds-nt/?type=tracks&page=1&count=2";
 const MIX_COUNT = 2;
+/** Every mix, a page at a time, for the shared mixes' pages. */
+const ALL_MIXES_URL = (page) =>
+  `https://api-v2.hearthis.at/omega-one-sounds-nt/?type=tracks&page=${page}&count=${ALL_MIXES_PAGE}`;
+const ALL_MIXES_PAGE = 100;
 
 const MEDIA_DIR = join(process.cwd(), "public", "media");
 const OUT_FILE = join(process.cwd(), "src", "content", "site-content.generated.json");
@@ -133,6 +139,30 @@ async function buildMixes() {
   );
 }
 
+/**
+ * Every mix, for the page each shared link opens. The cover stays on hearthis: only WhatsApp and the like
+ * fetch it, for the link's preview, so there's nothing to resize.
+ */
+async function buildSharedMixes() {
+  const mixes = [];
+  // hearthis counts pages from 1; a short page is the last
+  for (let page = 1; ; page++) {
+    const tracks = await fetchJson(ALL_MIXES_URL(page));
+    if (!Array.isArray(tracks)) throw new Error("the mixes feed did not answer with a list");
+    for (const track of tracks) {
+      mixes.push({
+        id: String(track.id),
+        title: track.title ?? "",
+        description: track.description ?? "",
+        durationSeconds: Number(track.duration) || 0,
+        plays: Number(track.playback_count) || 0,
+        artworkUrl: track.artwork_url ?? "",
+      });
+    }
+    if (tracks.length < ALL_MIXES_PAGE) return mixes;
+  }
+}
+
 /** Drops media from an earlier run that nothing points at any more. */
 async function pruneMedia() {
   const existing = await readdir(MEDIA_DIR);
@@ -144,19 +174,20 @@ async function pruneMedia() {
 async function main() {
   await mkdir(MEDIA_DIR, { recursive: true });
 
-  const [about, mixes] = await Promise.all([buildAbout(), buildMixes()]);
+  const [about, mixes, sharedMixes] = await Promise.all([buildAbout(), buildMixes(), buildSharedMixes()]);
   const pruned = await pruneMedia();
 
   const payload = {
     syncedAt: new Date().toISOString(),
     about,
     mixes,
+    sharedMixes,
   };
   await writeFile(OUT_FILE, `${JSON.stringify(payload, null, 2)}\n`);
 
   const shots = about.room.shots.length + about.legends.shots.length;
   console.log(
-    `synced: ${shots} shots, ${mixes.length} mixes, ${written.size} media files written` +
+    `synced: ${shots} shots, ${mixes.length} mixes (${sharedMixes.length} shareable), ${written.size} media files written` +
       (pruned ? `, ${pruned} stale removed` : ""),
   );
 }

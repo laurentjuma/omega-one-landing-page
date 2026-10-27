@@ -116,11 +116,25 @@ const mixSchema = z.object({
   artwork: imageSchema.nullish().transform((value) => value ?? null),
 });
 
+/**
+ * Any of the channel's mixes, for the page a shared mix's link opens (`/listen/mix/<id>/`). The cover is
+ * hearthis's: only a link's preview shows it.
+ */
+const sharedMixSchema = z.object({
+  id: z.string(),
+  title: z.string().default(""),
+  description: z.string().default(""),
+  durationSeconds: z.number().default(0),
+  plays: z.number().default(0),
+  artworkUrl: z.string().default(""),
+});
+
 const siteContentSchema = z.object({
   /** When the sync last ran, ISO 8601. */
   syncedAt: z.string(),
   about: aboutSchema,
   mixes: z.array(mixSchema),
+  sharedMixes: z.array(sharedMixSchema).default([]),
 });
 
 export type ContentImage = z.infer<typeof imageSchema>;
@@ -128,6 +142,7 @@ export type AboutContent = z.infer<typeof aboutSchema>;
 export type AboutGallery = z.infer<typeof gallerySchema>;
 export type AboutShot = z.infer<typeof shotSchema>;
 export type Mix = z.infer<typeof mixSchema>;
+export type SharedMix = z.infer<typeof sharedMixSchema>;
 
 /** Throws at build time if the generated file is missing a field the page needs. */
 export const siteContent = siteContentSchema.parse(generated);

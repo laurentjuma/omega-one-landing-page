@@ -55,6 +55,8 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: out
+          # .well-known/assetlinks.json, which lets the Android app open the site's mix links
+          include-hidden-files: true
 
   deploy:
     needs: build

@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.soundcheck.omegaone",
+      "sha256_cert_fingerprints": [
+        "23:15:09:1D:1C:90:BA:70:45:D3:42:4C:48:48:DC:86:AF:8A:74:B5:EA:0A:BE:53:C7:B0:FE:6A:7F:AF:2C:42",
+        "A5:C8:0A:71:AB:A2:5D:D1:97:38:25:A4:22:4F:F9:69:A3:CB:FC:71:B3:0E:EB:63:B3:FC:65:67:3A:BF:5F:36"
+      ]
+    }
+  }
+]
