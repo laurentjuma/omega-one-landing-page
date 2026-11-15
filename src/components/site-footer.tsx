@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { PlayStoreButton } from "@/components/play-store-button";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { siteConfig } from "@/lib/config";
@@ -20,6 +22,11 @@ export function SiteFooter({ colophon }: { colophon: string }) {
               Google Play
             </a>
             .
+          </p>
+          <p className="mt-2 text-sm text-subtle">
+            <Link href="/privacy-policy/" className="text-muted underline-offset-4 hover:underline">
+              Privacy policy
+            </Link>
           </p>
         </div>
 
