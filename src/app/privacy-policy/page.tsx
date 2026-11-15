@@ -78,21 +78,17 @@ export default function PrivacyPolicyPage() {
 
         <H2>Summary</H2>
         <List>
-          <li>You can listen without an account. Your playlists, downloads and settings stay on your phone.</li>
+          <li>There are no accounts. Your playlists, downloads and settings stay on your phone.</li>
           <li>
             The app uses Google services for usage statistics, crash reports, notifications and ads. These use
             identifiers from your device.
-          </li>
-          <li>
-            If you create a shop account or buy something, Shopify handles your account and checkout. We never
-            see your card details.
           </li>
           <li>We don’t sell your information.</li>
         </List>
 
         <H2>What the app collects</H2>
 
-        <H3>When you use the app (no account needed)</H3>
+        <H3>When you use the app</H3>
         <List>
           <li>
             <strong>Device identifier.</strong> The app reads your device’s Android ID. It is sent with requests
@@ -129,25 +125,6 @@ export default function PrivacyPolicyPage() {
             privacy policy.
           </li>
         </List>
-
-        <H3>When you create a shop account</H3>
-        <P>
-          The shop is run on Shopify. To create an account you give your first and last name, email address and
-          a password; these go to Shopify, which stores them. The app keeps you signed in by saving a sign-in
-          token and your name and email on your phone; signing out removes them.
-        </P>
-        <P>
-          New accounts are subscribed to email news and offers from {siteConfig.name}. Every such email has an
-          unsubscribe link, or you can ask us at {mail}.
-        </P>
-
-        <H3>When you buy something</H3>
-        <P>
-          Checkout is Shopify’s own secure checkout, shown inside the app. Shopify collects what is needed to
-          complete your order — such as your name, email, phone number, delivery address and payment details —
-          and passes us the order details we need to fulfil it. Card and other payment details are handled by
-          Shopify and its payment providers; they never reach us or the app.
-        </P>
 
         <H3>What stays on your phone</H3>
         <P>
@@ -195,9 +172,9 @@ export default function PrivacyPolicyPage() {
 
         <H2>How we use information</H2>
         <List>
-          <li>To stream mixes, run the shop and deliver your orders.</li>
+          <li>To stream mixes and run the app.</li>
           <li>To understand which mixes and features people use, and to fix crashes.</li>
-          <li>To send you notifications and, if you have a shop account, emails you haven’t unsubscribed from.</li>
+          <li>To send you notifications.</li>
           <li>To show ads, which keep the app free.</li>
           <li>To prevent fraud and abuse, and to meet our legal obligations.</li>
         </List>
@@ -213,10 +190,6 @@ export default function PrivacyPolicyPage() {
             <strong>hearthis.at</strong> — hosts and streams our mixes, and receives the notification token and
             device identifier described above (
             <A href="https://hearthis.at/privacy/">privacy policy</A>).
-          </li>
-          <li>
-            <strong>Shopify</strong> — shop accounts, orders and checkout (
-            <A href="https://www.shopify.com/legal/privacy">privacy policy</A>).
           </li>
           <li>
             <strong>GitHub</strong> — hosts the site and the app’s content files (
@@ -235,18 +208,12 @@ export default function PrivacyPolicyPage() {
         <H2>How long we keep it</H2>
         <P>
           Usage statistics are kept for the retention period set in Google Analytics, at most 14 months. Crash
-          reports are kept by Crashlytics for 90 days. Shop accounts are kept until you ask us to delete them;
-          order records are kept as long as tax and accounting law requires. Data on your phone stays there until
+          reports are kept by Crashlytics for 90 days. Data on your phone stays there until
           you delete it or uninstall the app.
         </P>
 
-        <H2 id="delete-account">Your choices and rights</H2>
+        <H2 id="your-rights">Your choices and rights</H2>
         <List>
-          <li>
-            <strong>Delete your shop account.</strong> Email {mail} from the address on the account with the
-            subject “Delete my account”. We’ll delete the account and its personal information within 30 days,
-            except order records we must keep by law.
-          </li>
           <li>
             <strong>Access, correct or delete your information</strong>, or object to how we use it: email{" "}
             {mail}. Depending on where you live (for example under Kenya’s Data Protection Act or the UK GDPR) you
@@ -257,8 +224,7 @@ export default function PrivacyPolicyPage() {
             Resetting your advertising ID, or uninstalling the app, ends the link to your past data.
           </li>
           <li>
-            <strong>Notifications and emails</strong> can be turned off in Android’s settings and with the
-            unsubscribe link in any email.
+            <strong>Notifications</strong> can be turned off in Android’s settings.
           </li>
         </List>
 
